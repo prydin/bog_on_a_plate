@@ -23,8 +23,8 @@ Q2 N002 N009 N001 0 BC547B
 Q3 N019 N017 N018 0 BC557C
 C4 N018 0 100n
 C6 0 N001 100n
-C7 N002 N009 1µ
-C8 N017 N019 1µ
+C7 N009 0 1µ
+C8 0 N017 1µ
 XU3 N011 N006 N001 N018 N007 NE5532
 R3 N011 N005 10k
 R11 N006 N005 10k
@@ -51,10 +51,12 @@ R19 N016 0 10k
 .param r_inv=if(inv,1m,1G)
 .param r_ph=47k
 .param r_ph_lo=1m+r_ph*(1-ph) r_ph_hi=1m+r_ph*ph
-; .step param vol list 1 0.5 0.25 0.125 0.06125
+;.step param vol list 1 0.5 0.25 0.125 0.06125
 ;.step dec param r_cutoff 1k 50k 2
 ;.step param inv list 0 1
 .step param ph list 0 0.2 0.4. 0.6 0.8 1
+* Phase shift
+* Voltage dropper
 .lib ne5532.sub
 .backanno
 .end
