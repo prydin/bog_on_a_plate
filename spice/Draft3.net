@@ -1,0 +1,14 @@
+* C:\proj\bog_on_a_plate\spice\Draft3.asc
+Q1 N002 N003 0 0 2N3904
+R1 N001 N002 10k
+R2 N002 N003 22k
+V1 N001 0 9
+V2 N003 0 SINE(0 0.1 1k)
+C1 OUT N002 1000µ
+R3 OUT 0 100k
+.model NPN NPN
+.model PNP PNP
+.lib C:\Users\pontu\AppData\Local\LTspice\lib\cmp\standard.bjt
+.tran 0 20m 0 1u
+.backanno
+.end
